@@ -8,5 +8,5 @@ Target = *
 Description = Checking for unread news posts...
 When = PreTransaction
 Depends = newsie
-Exec = /usr/bin/newsie/fetch
+Exec = /usr/bin/newsie fetch
 AbortOnFail
