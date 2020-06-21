@@ -12,7 +12,8 @@ yay -S newsie
 ...or built from source here.
 
 ```bash
-go build main.go
+go get
+go build newsie.go
 ```
 
 ## Usage
