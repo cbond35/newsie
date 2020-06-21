@@ -13,7 +13,7 @@ yay -S newsie
 
 ```bash
 go get
-go build main.go
+go build newsie.go
 ```
 
 ## Usage
