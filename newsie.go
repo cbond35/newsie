@@ -23,10 +23,6 @@ func handleLs(all bool) {
 func handleFetch(prompt bool) int {
 	status, msg := archnews.Fetch(prompt)
 
-	if prompt {
-		return status
-	}
-
 	fmt.Print(msg)
 	return status
 }
