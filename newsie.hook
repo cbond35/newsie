@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = *
+
+[Action]
+Description = Checking for unread news posts...
+When = PreTransaction
+Depends = newsie
+Exec = /usr/bin/newsie/fetch
+AbortOnFail
