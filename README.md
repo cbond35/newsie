@@ -12,6 +12,7 @@ yay -S newsie
 ...or built from source here.
 
 ```bash
+go get
 go build main.go
 ```
 
