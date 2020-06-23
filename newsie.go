@@ -18,15 +18,6 @@ func handleLs(all bool) {
 	}
 }
 
-// handleFetch prints the message associated with Fetch (or not if prompt)
-// and returns the number of unread items used by the pacman hook.
-func handleFetch(prompt bool) int {
-	status, msg := archnews.Fetch(prompt)
-
-	fmt.Print(msg)
-	return status
-}
-
 // main parses the docopt options and calls the appropriate newsie function.
 func main() {
 
@@ -76,16 +67,23 @@ Options:
 	number, _ := args.Bool("--number")
 
 	archnews.New()
-	status := 0
+	var status int = 0
+	var msg string
 
 	if browse, _ := args.Bool("browse"); browse {
 		archnews.Browse(a || all)
+
 	} else if clear, _ := args.Bool("clear"); clear {
 		archnews.Clear()
 	} else if fetch, _ := args.Bool("fetch"); fetch {
-		status = handleFetch(p || prompt)
+		status, msg = archnews.Fetch(p || prompt)
+		fmt.Print(msg)
 	} else if ls, _ := args.Bool("ls"); ls {
-		handleLs(a || all)
+		items := archnews.Ls(a || all)
+
+		for _, item := range items {
+			fmt.Println(item)
+		}
 	} else if read, _ := args.Bool("read"); read && !(n || number) {
 		prettyPost, _ := archnews.Read(1)
 		fmt.Println(prettyPost)
