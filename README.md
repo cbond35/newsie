@@ -52,7 +52,7 @@ newsie read [-n <post_number> | --number <post_number>]
 
 
 ## pacman
-The pacman hook is enabled by default if you install via the AUR. It will abort any upgrades/installs (i.e. *-S* or *-Syu*) if you have any unread items. You can disable it by symlinking the existing hook at */usr/share/libalpm/hooks/* to */dev/null*.
+The pacman hook is enabled by default if you install via the AUR. It will abort any upgrades/installs (i.e. *-S*, *-Syu*, and friends) if you have any unread items. You can disable it by symlinking the existing hook at */usr/share/libalpm/hooks/* to */dev/null*.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
