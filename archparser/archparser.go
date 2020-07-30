@@ -3,7 +3,7 @@ package archparser
 import (
 	"strings"
 
-	"github.com/cbbond/newsie-golang/termstyle"
+	"github.com/cbbond/newsie/termstyle"
 
 	"github.com/mmcdole/gofeed"
 	"golang.org/x/net/html"

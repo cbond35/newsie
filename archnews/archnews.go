@@ -14,8 +14,8 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/cbbond/newsie-golang/archparser"
-	"github.com/cbbond/newsie-golang/termstyle"
+	"github.com/cbbond/newsie/archparser"
+	"github.com/cbbond/newsie/termstyle"
 
 	"github.com/mmcdole/gofeed"
 )

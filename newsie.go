@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/cbbond/newsie-go/archnews"
+	"github.com/cbbond/newsie/archnews"
 
 	"github.com/docopt/docopt-go"
 )
